@@ -2697,24 +2697,6 @@ a.light-color {
     padding: 30px 24px;
   }
 }
-.uxora-iconbox-wrap.wrap2 {
-  margin-top: -55%;
-}
-@media (max-width: 1399px) {
-  .uxora-iconbox-wrap.wrap2 {
-    margin-top: -59%;
-  }
-}
-@media (max-width: 991px) {
-  .uxora-iconbox-wrap.wrap2 {
-    margin-top: -67%;
-  }
-}
-@media (max-width: 767px) {
-  .uxora-iconbox-wrap.wrap2 {
-    margin-top: 0;
-  }
-}
 .uxora-iconbox-card {
   padding-top: 24px;
 }
