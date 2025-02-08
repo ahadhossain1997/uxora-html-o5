@@ -6,23 +6,11 @@
   /*--------------------------------------------------------------
    [Table of contents]
   
-  LONYO PRELOADER JS INIT
-  LONYO HEADER TRIGER JS INIT
-  LONYO MENU SIDEBAR JS INIT
-  LONYO PROGRES CIRCLE JS INIT
-  LONYO MAGNIFIC PUPOP JS INIT
-  LONYO BRAND SLIDER INIT
-  LONYO COUNTER JS INIT
-  LONYO TSTIMONIAL SLIDER INIT
-  LONYO SKILLBAR JS INIT
-  LONYO CURRENT YEAR JS INIT
-  LONYO AOS ANIMATION JS INIT
-  LONYO MAP JS INIT
-  LONYO VERTICAL SLIDER JS INIT
-  LONYO TOOGLE BUTTON JS INIT
-  LONYO PORTFOLIO MASONAY FILTER JS
-  LONYO TOGGLE PASSOWRD JS INIT
-  
+  UXORA PRELOADER JS INIT
+  UXORA HEADER TRIGER JS INIT
+  UXORA MENU SIDEBAR JS INIT
+  UXORA BRAND SLIDER INIT
+  UXORA TSTIMONIAL SLIDER INIT
   
   -------------------------------------------------------------------*/
 
@@ -35,12 +23,12 @@
   };
   $(function () {
     /*--------------------------------------------------------------
-    LONYO PRELOADER JS INIT
+    UXORA PRELOADER JS INIT
     --------------------------------------------------------------*/
     // $(".uxora-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
-    LONYO MENU SIDEBAR JS INIT
+    UXORA MENU SIDEBAR JS INIT
     --------------------------------------------------------------*/
     $(".uxora-header-triger").on("click", function (e) {
       $(".uxora-sidemenu-column, .offcanvas-overlay").addClass("active");
@@ -57,40 +45,9 @@
       }
     });
     /*--------------------------------------------------------------
-    LONYO PROGRES CIRCLE JS INIT
+    UXORA STYCKY HEADER JS INIT
     --------------------------------------------------------------*/
 
-    var progressPath = document.querySelector('.progress-wrap path');
-    var pathLength = progressPath.getTotalLength();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-    progressPath.getBoundingClientRect();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function updateProgress() {
-      var scroll = $(window).scrollTop();
-      var height = $(document).height() - $(window).height();
-      var progress = pathLength - scroll * pathLength / height;
-      progressPath.style.strokeDashoffset = progress;
-    };
-    updateProgress();
-    $(window).scroll(updateProgress);
-    var offset = 50;
-    var duration = 550;
-    jQuery(window).on('scroll', function () {
-      if (jQuery(this).scrollTop() > offset) {
-        jQuery('.progress-wrap').addClass('active-progress');
-      } else {
-        jQuery('.progress-wrap').removeClass('active-progress');
-      }
-    });
-    jQuery('.progress-wrap').on('click', function (event) {
-      event.preventDefault();
-      jQuery('html, body').animate({
-        scrollTop: 0
-      }, duration);
-      return false;
-    });
     var lastScroll = 0;
     function sticky_header() {
       var header_hegith = $('header').innerHeight();
@@ -153,6 +110,11 @@
         }]
       });
     }
+
+    /*--------------------------------------------------------------
+    UXORA TESTIMONIAL JS INIT
+    --------------------------------------------------------------*/
+
     var p_slider_data = $('.uxora-t-slider-init');
     if (p_slider_data.is_exist()) {
       p_slider_data.slick({

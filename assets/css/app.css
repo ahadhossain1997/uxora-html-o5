@@ -359,7 +359,7 @@ h3,
 @media (max-width: 1199px) {
   h3,
   .h3 {
-    font-size: 24px;
+    font-size: 24px !important;
   }
 }
 
@@ -3147,17 +3147,17 @@ img.plasicon {
 }
 
 .uxora-hero-section {
-  padding: 190px 0 500px;
+  padding: 190px 0 610px;
   position: relative;
 }
 @media (max-width: 1399px) {
   .uxora-hero-section {
-    padding: 190px 0 620px;
+    padding: 190px 0 670px;
   }
 }
 @media (max-width: 1199px) {
   .uxora-hero-section {
-    padding: 190px 0 480px;
+    padding: 190px 0 550px;
   }
 }
 @media (max-width: 991px) {
@@ -3168,6 +3168,11 @@ img.plasicon {
 @media (max-width: 767px) {
   .uxora-hero-section {
     padding: 130px 0 510px;
+  }
+}
+@media (max-width: 767px) {
+  .uxora-hero-section {
+    padding: 130px 0 550px;
   }
 }
 .uxora-hero-content {
@@ -3215,6 +3220,11 @@ img.plasicon {
   position: relative;
   text-align: right;
 }
+@media (max-width: 991px) {
+  .uxora-about-us-thumb.thumb2 {
+    text-align: left;
+  }
+}
 .uxora-about-us-thumb.thumb2 img {
   border-radius: 10px;
 }
@@ -3228,6 +3238,16 @@ img.plasicon {
   position: absolute;
   bottom: 80px;
   left: 40px;
+}
+@media (max-width: 991px) {
+  .uxora-features-card {
+    left: 60%;
+  }
+}
+@media (max-width: 767px) {
+  .uxora-features-card {
+    display: none;
+  }
 }
 
 .mt-30 {
@@ -3746,10 +3766,23 @@ textarea::placeholder {
     padding: 18px 30px;
   }
 }
+.uxora-default-btn img,
+.uxora-subcribe-btn img,
+#uxora-submit-btn img {
+  transition: all 0.4s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .uxora-default-btn:hover,
 .uxora-subcribe-btn:hover,
 #uxora-submit-btn:hover {
   color: var(--light-color);
+}
+.uxora-default-btn:hover img,
+.uxora-subcribe-btn:hover img,
+#uxora-submit-btn:hover img {
+  transform: scale(1.3);
 }
 .uxora-default-btn.uxora-header-btn,
 .uxora-subcribe-btn.uxora-header-btn,
@@ -3881,36 +3914,6 @@ textarea::placeholder {
   transform: translateX(calc(1 * var(--arrow-hover-move-x)));
   opacity: 0.5;
   transition-delay: 0s, 0s;
-}
-
-.title-btn {
-  user-select: none;
-  -moz-user-select: none;
-  background: var(--white-bg) none repeat scroll 0 0;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  text-align: center;
-  touch-action: manipulation;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-  vertical-align: middle;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  border-radius: 50px;
-  --arrow-hover-move-x: -110%;
-  gap: 10px;
-  z-index: 1;
-  position: relative;
-  border: none;
 }
 
 .uxora-pagination {
@@ -4214,7 +4217,7 @@ a.uxora-default-btn.sm-size {
   top: 0;
   bottom: 0;
   z-index: 9999;
-  background-color: #142D6F;
+  background-color: var(--heading-color);
   display: flex;
   align-items: center;
   justify-content: center;
