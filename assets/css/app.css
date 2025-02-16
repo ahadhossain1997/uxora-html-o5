@@ -22,7 +22,7 @@
 --accent-bg: #7D36F7;
 --white-color: #ffffff;
 --white-bg: #ffffff;
---light-color: #F4E6CB;
+--light-color: #FCF0E3;
 --light-color2: #2C205D;
 }
 
@@ -2375,6 +2375,45 @@ a.light-color {
   transform: rotate(-90deg) !important;
 }
 
+.spectacledcoder-glowing-button1 {
+  margin: auto;
+  width: 250px;
+  height: 70px;
+  display: flex;
+  border-radius: 35px;
+  animation: rotation 3s linear 0s infinite;
+}
+
+.spectacledcoder-glowing-button1:hover {
+  background: linear-gradient(var(--gradient-angle), rgb(255, 255, 255), rgb(0, 0, 0));
+}
+
+.spectacledcoder-button1 {
+  width: 98%;
+  height: 94%;
+  background-color: rgba(0, 0, 0, 0.903);
+  margin: auto;
+  outline: none;
+  border: none;
+  border-radius: 35px;
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+  font-family: "Belanosima", sans-serif;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 .uxora-footer-section {
   padding-top: 130px;
 }
@@ -3737,7 +3776,7 @@ textarea::placeholder {
 #uxora-submit-btn {
   font-size: 16px;
   line-height: 1.5em;
-  padding: 16px 45px;
+  padding: 18px 25px;
   font-weight: 700;
   font-family: "Inter", serif;
   border-radius: 10px;
@@ -3754,6 +3793,7 @@ textarea::placeholder {
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   color: var(--light-color);
+  transition: all 0.4s;
   background-color: var(--accent-bg);
   overflow: hidden;
   transform-style: preserve-3d;
@@ -3770,9 +3810,14 @@ textarea::placeholder {
 .uxora-subcribe-btn img,
 #uxora-submit-btn img {
   transition: all 0.4s;
-  width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.uxora-default-btn.btn2,
+.uxora-subcribe-btn.btn2,
+#uxora-submit-btn.btn2 {
+  box-shadow: 0px 0px 10px 0px #FCF0E3 inset;
+  background-color: #221653;
 }
 .uxora-default-btn:hover,
 .uxora-subcribe-btn:hover,
@@ -3849,14 +3894,6 @@ textarea::placeholder {
   box-shadow: none;
 }
 
-.hero-btn-wrap {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
 @media (max-width: 991px) {
   .uxora-title-btn {
     width: 100%;
@@ -3864,58 +3901,44 @@ textarea::placeholder {
     margin-top: 30px;
   }
 }
-.uxora-title-btn.btn2 {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
+
+.uxora-animation-btn {
+  border-radius: 10px;
+  transition: all 0.4s !important;
+  padding: 3px 3px;
+  animation: rotation 3s linear 0s infinite;
+}
+.uxora-animation-btn.btn2 {
+  width: 216px;
+}
+.uxora-animation-btn.btn3 {
+  width: 216px;
+  margin: 0 auto;
+}
+@media (max-width: 991px) {
+  .uxora-animation-btn.btn4 {
+    width: 216px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+.uxora-animation-btn:hover {
+  background: linear-gradient(var(--gradient-angle), rgb(255, 255, 255), rgb(0, 0, 0));
 }
 
-.title-btn svg {
-  transition: all 0.3s ease-out 0s;
-  margin-left: 5px;
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }
-
-.title-btn:hover svg path:nth-of-type(1), .title-btn:focus-visible svg path:nth-of-type(1) {
-  transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
-  opacity: 0;
-  transition-delay: 0s, 0s;
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
-
-.title-btn svg path:nth-of-type(1) {
-  transform: translateX(0);
-  opacity: 1;
-  transition-delay: 0.15s, 0.15s;
-}
-
-.title-btn svg path {
-  transition: transform 0.38s cubic-bezier(0.37, 0.08, 0.02, 0.93), opacity 0.18s ease-out;
-}
-
-.title-btn:hover svg path:nth-of-type(2), .title-btn:focus-visible svg path:nth-of-type(2) {
-  transform: translateX(0);
-  opacity: 1;
-  transition-delay: 0.15s, 0.15s;
-}
-
-.title-btn svg path:nth-of-type(2) {
-  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
-  opacity: 0.5;
-  transition-delay: 0s, 0s;
-}
-
-.title-btn svg path:nth-of-type(1) {
-  transform: translateX(0);
-  opacity: 1;
-  transition-delay: 0.15s, 0.15s;
-}
-
-.title-btn svg path:nth-of-type(2) {
-  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
-  opacity: 0.5;
-  transition-delay: 0s, 0s;
-}
-
 .uxora-pagination {
   margin-top: 50px;
 }
